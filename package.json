@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node ignore --feedback.json server.json"
+    "dev": "nodemon --ignore feedback.json server.json"
   },
   "keywords": [],
   "author": "Daniel Khan",
@@ -20,6 +20,7 @@
     "prettier": "^2.5.1"
   },
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.2"
   }
 }

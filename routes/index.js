@@ -5,13 +5,13 @@ const router = express.Router();
 const speakersRouter = require('./speakers');
 const feedbackRouter = require('./feedback');
 
-module.exports = () => {
+module.exports = (params) => {
   router.get('/', (request, response) => {
     response.render('pages/index', { pageTitle: 'Bem-vindos' });
   });
 
-  router.use('/speakers', speakersRouter());
-  router.use('/feedback', feedbackRouter());
+  router.use('/speakers', speakersRouter(params));
+  router.use('/feedback', feedbackRouter(params));
 
   return router;
 };

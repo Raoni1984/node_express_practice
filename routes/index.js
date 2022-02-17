@@ -7,6 +7,11 @@ const feedbackRouter = require('./feedback');
 
 module.exports = (params) => {
   router.get('/', (request, response) => {
+    // if (!request.session.visitcount) {
+    //   request.session.visitcount = 0;
+    // }
+    // request.session.visitcount += 1;
+
     response.render('pages/index', { pageTitle: 'Bem-vindos' });
   });
 
